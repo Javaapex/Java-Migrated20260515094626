@@ -30,7 +30,7 @@ class KeithNumberTest {
 
     /**
      * Tests two-digit Keith numbers.
-     * Known two-digit Keith numbers: 14, 19, 28, 47, 61, 75.
+     * Known two-digit Keith numbers: 14 // TODO: Consider extracting as named constant, 19 // TODO: Consider extracting as named constant, 28 // TODO: Consider extracting as named constant, 47, 61, 75.
      */
     @Test
     void testTwoDigitKeithNumbers() {
@@ -146,6 +146,7 @@ class KeithNumberTest {
     @Test
     void testAllKnownTwoDigitKeithNumbers() {
         int[] knownKeithNumbers = {14, 19, 28, 47, 61, 75};
+        for ( // TODO: Consider using Stream API for functional operations
         for (int number : knownKeithNumbers) {
             assertTrue(KeithNumber.isKeith(number), "Expected " + number + " to be a Keith number");
         }

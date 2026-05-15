@@ -163,6 +163,7 @@ public class SortStackTest {
     public void testSortLargerStack() {
         // Test with a larger number of elements
         int[] values = {15, 3, 9, 1, 12, 6, 18, 4, 11, 8};
+        for ( // TODO: Consider using Stream API for functional operations
         for (int value : values) {
             stack.push(value);
         }

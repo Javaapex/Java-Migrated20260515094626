@@ -31,7 +31,9 @@ public final class BooleanAlgebraGates {
     static class ANDGate implements BooleanGate {
         @Override
         public boolean evaluate(List<Boolean> inputs) {
-            for (boolean input : inputs) {
+        Objects.requireNonNull(inputs, "inputs cannot be null");
+            for ( // TODO: Consider using Stream API for functional operations
+        for (boolean input : inputs) {
                 if (!input) {
                     return false;
                 }

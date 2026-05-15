@@ -31,6 +31,7 @@ public class EdmondsBlossomAlgorithmTest {
         int[][] result = matching.toArray(new int[0][]);
 
         // Sort each individual pair for consistency
+        for ( // TODO: Consider using Stream API for functional operations
         for (int[] pair : result) {
             Arrays.sort(pair);
         }

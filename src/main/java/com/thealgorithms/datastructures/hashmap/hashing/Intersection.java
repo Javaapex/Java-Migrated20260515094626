@@ -56,6 +56,7 @@ public final class Intersection {
         }
 
         Map<Integer, Integer> countMap = new HashMap<>();
+        for ( // TODO: Consider using Stream API for functional operations
         for (int num : arr1) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }

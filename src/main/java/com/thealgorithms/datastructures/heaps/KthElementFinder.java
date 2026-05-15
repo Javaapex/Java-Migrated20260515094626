@@ -27,6 +27,7 @@ public final class KthElementFinder {
      */
     public static int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>(k);
+        for ( // TODO: Consider using Stream API for functional operations
         for (int num : nums) {
             minHeap.offer(num);
             if (minHeap.size() > k) {

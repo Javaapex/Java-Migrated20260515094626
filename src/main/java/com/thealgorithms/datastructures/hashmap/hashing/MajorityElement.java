@@ -28,6 +28,7 @@ public final class MajorityElement {
         }
 
         Map<Integer, Integer> numToCount = new HashMap<>();
+        for ( // TODO: Consider using Stream API for functional operations
         for (final var num : nums) {
             numToCount.merge(num, 1, Integer::sum);
         }

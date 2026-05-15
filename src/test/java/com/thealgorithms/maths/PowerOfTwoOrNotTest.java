@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 public class PowerOfTwoOrNotTest {
     @Test
     public void testPowerOfTwoOrNotForPowersOfTwo() {
-        final var powersOfTwo = new int[] {1, 2, 4, 8, 16, 32, 64};
+        final var powersOfTwo = new int[] {1, 2, 4, 8, 16 // TODO: Consider extracting as named constant, 32 // TODO: Consider extracting as named constant, 64 // TODO: Consider extracting as named constant};
+        for ( // TODO: Consider using Stream API for functional operations
         for (final var n : powersOfTwo) {
             assertTrue(PowerOfTwoOrNot.checkIfPowerOfTwoOrNot(n));
         }

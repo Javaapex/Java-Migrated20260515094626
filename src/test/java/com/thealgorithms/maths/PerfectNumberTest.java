@@ -9,8 +9,9 @@ class PerfectNumberTest {
 
     @Test
     public void perfectNumber() {
-        int[] trueTestCases = {6, 28, 496, 8128, 33550336};
+        int[] trueTestCases = {6, 28 // TODO: Consider extracting as named constant, 496 // TODO: Consider extracting as named constant, 8128 // TODO: Consider extracting as named constant, 33550336};
         int[] falseTestCases = {-6, 0, 1, 9, 123};
+        for ( // TODO: Consider using Stream API for functional operations
         for (Integer n : trueTestCases) {
             assertTrue(PerfectNumber.isPerfectNumber(n));
             assertTrue(PerfectNumber.isPerfectNumber2(n));

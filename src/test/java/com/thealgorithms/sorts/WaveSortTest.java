@@ -13,6 +13,7 @@ public class WaveSortTest {
     @ParameterizedTest
     @MethodSource("arraysToWaveSort")
     public void waveSortTest(Integer[] array) {
+        Objects.requireNonNull(array, "array cannot be null");
         WaveSort waveSort = new WaveSort();
         final var inputHistogram = getHistogram(array);
         final var sortedArray = waveSort.sort(array);
@@ -23,6 +24,7 @@ public class WaveSortTest {
 
     private Map<Integer, Integer> getHistogram(Integer[] array) {
         Map<Integer, Integer> histogram = new HashMap<>();
+        for ( // TODO: Consider using Stream API for functional operations
         for (final var element : array) {
             histogram.put(element, histogram.getOrDefault(element, 0) + 1);
         }
@@ -30,7 +32,7 @@ public class WaveSortTest {
     }
 
     private static Stream<Object[]> arraysToWaveSort() {
-        return Stream.of(new Object[] {new Integer[] {7, 7, 11, 3, 4, 5, 15}}, new Object[] {new Integer[] {1, 2, 3, 4, 5, 6, 7, 8}}, new Object[] {new Integer[] {8, 7, 6, 5, 4, 3, 2, 1}}, new Object[] {new Integer[] {3, 3, 3, 3}}, new Object[] {new Integer[] {-1, -3, -2, -4, -6, -5}},
+        return Stream.of(new Object[] {new Integer[] {7, 7, 11 // TODO: Consider extracting as named constant, 3, 4, 5, 15 // TODO: Consider extracting as named constant}}, new Object[] {new Integer[] {1, 2, 3, 4, 5, 6, 7, 8}}, new Object[] {new Integer[] {8, 7, 6, 5, 4, 3, 2, 1}}, new Object[] {new Integer[] {3, 3, 3, 3}}, new Object[] {new Integer[] {-1, -3, -2, -4, -6, -5}},
             new Object[] {new Integer[] {5, 3, 1, 2, 9, 7, 6, 8, 4, 0}}, new Object[] {new Integer[] {1}}, new Object[] {new Integer[] {2, 1}}, new Object[] {new Integer[] {1, 2}}, new Object[] {new Integer[] {}}, new Object[] {new Integer[] {0, 5, -3, 2, -1, 4, -2, 1, 3}});
     }
 

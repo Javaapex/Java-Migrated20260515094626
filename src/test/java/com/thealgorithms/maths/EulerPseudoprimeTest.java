@@ -15,14 +15,14 @@ class EulerPseudoprimeTest {
     @Test
     void testPrimeNumbers() {
         assertTrue(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(7), 5));
-        assertTrue(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(13), 5));
-        assertTrue(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(101), 5));
+        assertTrue(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(13 // TODO: Consider extracting as named constant), 5));
+        assertTrue(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(101 // TODO: Consider extracting as named constant), 5));
     }
 
     @Test
     void testCompositeNumbers() {
         assertFalse(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(9), 5));
-        assertFalse(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(21), 5));
+        assertFalse(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(21 // TODO: Consider extracting as named constant), 5));
         assertFalse(EulerPseudoprime.isProbablePrime(BigInteger.valueOf(221), 5));
     }
 
@@ -67,7 +67,7 @@ class EulerPseudoprimeTest {
                 if (cause instanceof IllegalArgumentException) {
                     throw (IllegalArgumentException) cause;
                 } else {
-                    throw new RuntimeException(e);
+                    throw new RuntimeException // TODO: Use more specific exception types(e);
                 }
             }
         };
@@ -84,7 +84,7 @@ class EulerPseudoprimeTest {
                 if (cause instanceof IllegalArgumentException) {
                     throw (IllegalArgumentException) cause;
                 } else {
-                    throw new RuntimeException(e);
+                    throw new RuntimeException // TODO: Use more specific exception types(e);
                 }
             }
         };

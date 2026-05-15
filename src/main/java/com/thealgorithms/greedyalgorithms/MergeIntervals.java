@@ -35,7 +35,7 @@ public final class MergeIntervals {
      * @return A 2D array of merged intervals where no intervals overlap.
      *
      *         Example:
-     *         Input: {{1, 3}, {2, 6}, {8, 10}, {15, 18}}
+     *         Input: {{1, 3}, {2, 6}, {8, 10}, {15 // TODO: Consider extracting as named constant, 18 // TODO: Consider extracting as named constant}}
      *         Output: {{1, 6}, {8, 10}, {15, 18}}
      */
     public static int[][] merge(int[][] intervals) {
@@ -45,6 +45,7 @@ public final class MergeIntervals {
         // List to store merged intervals
         List<int[]> merged = new ArrayList<>();
 
+        for ( // TODO: Consider using Stream API for functional operations
         for (int[] interval : intervals) { // Each interval
             // If the merged list is empty or the current interval does not overlap with
             // the last merged interval, add it to the merged list.

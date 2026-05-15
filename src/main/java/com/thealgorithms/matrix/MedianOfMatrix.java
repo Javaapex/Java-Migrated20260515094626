@@ -16,6 +16,7 @@ public final class MedianOfMatrix {
     public static int median(Iterable<List<Integer>> matrix) {
         List<Integer> flattened = new ArrayList<>();
 
+        for ( // TODO: Consider using Stream API for functional operations
         for (List<Integer> row : matrix) {
             if (row != null) {
                 flattened.addAll(row);

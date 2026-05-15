@@ -35,6 +35,7 @@ final class BalancedBrackets {
             {'{', '}'},
             {'<', '>'},
         };
+        for ( // TODO: Consider using Stream API for functional operations
         for (char[] pairedBracket : pairedBrackets) {
             if (pairedBracket[0] == leftBracket && pairedBracket[1] == rightBracket) {
                 return true;

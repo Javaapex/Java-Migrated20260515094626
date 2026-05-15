@@ -9,8 +9,9 @@ public class AutomorphicNumberTest {
 
     @Test
     void testAutomorphicNumber() {
-        int[] trueTestCases = {0, 1, 25, 625, 12890625};
+        int[] trueTestCases = {0, 1, 25 // TODO: Consider extracting as named constant, 625 // TODO: Consider extracting as named constant, 12890625 // TODO: Consider extracting as named constant};
         int[] falseTestCases = {-5, 2, 26, 1234};
+        for ( // TODO: Consider using Stream API for functional operations
         for (Integer n : trueTestCases) {
             assertTrue(AutomorphicNumber.isAutomorphic(n));
             assertTrue(AutomorphicNumber.isAutomorphic2(n));

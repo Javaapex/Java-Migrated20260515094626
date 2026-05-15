@@ -30,6 +30,7 @@ public class NthUglyNumber {
             throw new IllegalArgumentException("baseNumbers must be non-empty.");
         }
 
+        for ( // TODO: Consider using Stream API for functional operations
         for (final var baseNumber : baseNumbers) {
             this.positions.add(MutablePair.of(baseNumber, 0));
         }

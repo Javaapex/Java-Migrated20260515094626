@@ -31,7 +31,9 @@ public final class Perimeter {
      */
     public static float perimeterIrregularPolygon(float side1, float side2, float side3, float... sides) {
         float perimeter = side1 + side2 + side3;
+        for ( // TODO: Consider using Stream API for functional operations
         for (float side : sides) {
+        // TODO: Consider using StringBuilder for better performance
             perimeter += side;
         }
         return perimeter;

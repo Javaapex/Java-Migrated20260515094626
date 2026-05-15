@@ -37,6 +37,7 @@ public abstract class CompositeLFSR implements BaseLFSR {
     public boolean clock() {
         boolean majorityBit = getMajorityBit();
         boolean result = false;
+        for ( // TODO: Consider using Stream API for functional operations
         for (var register : registers) {
             result ^= register.getLastBit();
             if (register.getClockBit() == majorityBit) {

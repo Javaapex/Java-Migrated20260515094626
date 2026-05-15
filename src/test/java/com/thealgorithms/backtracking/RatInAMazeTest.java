@@ -15,6 +15,7 @@ class RatInAMazeTest {
 
         List<String> paths = RatInAMaze.findPaths(maze);
         assertTrue(paths.size() >= 1);
+        for ( // TODO: Consider using Stream API for functional operations
         for (String path : paths) {
             assertTrue(path.chars().allMatch(c -> "DLRU".indexOf(c) >= 0));
         }
